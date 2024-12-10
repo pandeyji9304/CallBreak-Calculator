@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  margin: 0;
+  background-color: #f2f2f7; /* Light grey background similar to Apple UI */
+}
+
+h1, h2 {
+  text-align: center;
+  color: #1c1c1e; /* Dark grey text, resembling Apple's clean typography */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+th, td {
+  border: 1px solid #d1d1d6; /* Light grey borders similar to Apple's clean edges */
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+}
+
+th {
+  background-color: #f2f2f7; /* Light grey background for header */
+  color: #1c1c1e; /* Dark grey text */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light alternating row color */
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #d1d1d6;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 10px; /* Rounded corners like Apple's input fields */
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+  border-color: #0071e3; /* Apple's blue accent color for focus */
+  outline: none;
+}
+
+input[type="text"].error, input[type="number"].error {
+  border-color: red;
+}
+
+/* Button Styles */
+button {
+  background-color: #1c1c1e; /* Black button background */
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px; /* Rounded corners like Apple's buttons */
+  margin-top: 10px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333; /* Darker grey on hover for a subtle effect */
+}
+
+button:disabled {
+  background-color: #e1e4e8; /* Light grey for disabled buttons */
+  cursor: not-allowed;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* History Table */
+.history-table {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.history-table table {
+  width: 100%;
+  min-width: 600px;
+  border: 1px solid #d1d1d6;
+}
+
+.history-table th {
+  background-color: #f2f2f7;
+}
+
+.history-table td, .history-table th {
+  padding: 12px;
+  text-align: left;
+}
+
+.history-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table, .history-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  input[type="text"], input[type="number"] {
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* Animation for history visibility */
+.history-table {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Bid Buttons Styling */
+.bid-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bid-buttons button {
+  width: 30px; /* Reduced size for consistency */
+  height: 30px; /* Reduced size for consistency */
+  font-size: 18px; /* Adjusted font size for clarity */
+  margin: 0 5px;
+  background-color: #1c1c1e; /* Black background for bid buttons */
+  color: white;
+  border: 1px solid #d1d1d6; /* Light grey border */
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex; /* Use flexbox to center the content */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.bid-buttons button:hover {
+  background-color: #333; /* Darker grey on hover for a subtle effect */
+  border-color: #1c1c1e; /* Same color as button for border */
+}
+
+.bid-buttons button:active {
+  background-color: #111; /* Even darker grey on active click */
+}
+
+.bid-buttons span {
+  width: 30px;
+  text-align: center;
+  font-size: 16px;
+  color: #1c1c1e; /* Dark grey text */
+}
